@@ -10,7 +10,7 @@ public class OboeTest {
 
     @Before
     public void before(){
-        oboe = new Oboe("Brown", "Wood", 500, 100, 65);
+        oboe = new Oboe("Brown", "Wood", 500, 100, 65, "oomph");
     }
 
     @Test
@@ -37,5 +37,12 @@ public class OboeTest {
     public void hasLength(){
         assertEquals(65, oboe.getLength());
     }
+
+    @Test
+    public void canPlay(){
+        assertEquals("I play this sound: oomph", oboe.play("oomph"));
+    }
+
+
 
 }

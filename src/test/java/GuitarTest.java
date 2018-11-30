@@ -10,7 +10,7 @@ public class GuitarTest {
 
     @Before
     public void before(){
-        guitar = new Guitar("Blue", "Wood", 2500, 400, "Gibson", 6);
+        guitar = new Guitar("Blue", "Wood", 2500, 400, "Gibson", 6, "pluck");
     }
 
     @Test
@@ -41,5 +41,10 @@ public class GuitarTest {
     @Test
     public void hasNumOfStrings(){
         assertEquals(6, guitar.getNumOfStrings());
+    }
+
+    @Test
+    public void canPlay(){
+        assertEquals("I play this sound: pluck", guitar.play("pluck"));
     }
 }

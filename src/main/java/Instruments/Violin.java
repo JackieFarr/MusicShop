@@ -4,8 +4,8 @@ public class Violin extends Instrument {
 
     private String bowType;
 
-    public Violin(String colour, String material, int sellPrice, int buyPrice, String bowType){
-        super(colour, "String", material, sellPrice, buyPrice);
+    public Violin(String colour, String material, int sellPrice, int buyPrice, String bowType, String sound){
+        super(colour, "String", material, sellPrice, buyPrice, sound);
         this.bowType = bowType;
     }
 

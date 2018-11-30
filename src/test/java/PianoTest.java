@@ -11,7 +11,7 @@ public class PianoTest {
 
     @Before
     public void before(){
-        piano = new Piano("Black", "Wood", 1000, 500, "Yamaha", 3);
+        piano = new Piano("Black", "Wood", 1000, 500, "Yamaha", 3, "honky tonk");
     }
 
     @Test
@@ -42,5 +42,10 @@ public class PianoTest {
     @Test
     public void getNumOfPedals(){
         assertEquals(3, piano.getNumOfPedals());
+    }
+
+    @Test
+    public void canPlay(){
+        assertEquals("I play this sound: honky tonk", piano.play("honky tonk"));
     }
 }

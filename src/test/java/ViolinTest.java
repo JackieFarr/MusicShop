@@ -10,7 +10,7 @@ public class ViolinTest {
 
     @Before
     public void before(){
-        violin = new Violin("Red", "Maple", 5000, 2000, "Ivory");
+        violin = new Violin("Red", "Maple", 5000, 2000, "Ivory", "eee");
     }
 
     @Test
@@ -36,5 +36,10 @@ public class ViolinTest {
     @Test
     public void hasBowType(){
         assertEquals("Ivory", violin.getBowType());
+    }
+
+    @Test
+    public void canPlay(){
+        assertEquals("I play this sound: eee", violin.play("eee"));
     }
 }
