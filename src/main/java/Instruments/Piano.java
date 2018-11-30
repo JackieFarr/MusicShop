@@ -1,6 +1,6 @@
 package Instruments;
 
-public class Piano extends Instrument {
+public class Piano extends Instrument{
 
     private String brand;
     private int numOfPedals;
