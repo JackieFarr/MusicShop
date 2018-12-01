@@ -1,6 +1,8 @@
 package Instruments;
 
-public class Violin extends Instrument {
+import Interfaces.ISell;
+
+public class Violin extends Instrument implements ISell {
 
     private String bowType;
 
@@ -11,5 +13,9 @@ public class Violin extends Instrument {
 
     public String getBowType() {
         return this.bowType;
+    }
+
+    public int calculateMarkup(int sellPrice, int buyPrice){
+        return this.getSellPrice() - this.getBuyPrice() ;
     }
 }

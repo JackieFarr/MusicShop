@@ -1,6 +1,8 @@
 package Instruments;
 
-public class Guitar extends Instrument {
+import Interfaces.ISell;
+
+public class Guitar extends Instrument implements ISell {
 
     private String brand;
     private int numOfStrings;
@@ -17,5 +19,9 @@ public class Guitar extends Instrument {
 
     public int getNumOfStrings() {
         return this.numOfStrings;
+    }
+
+    public int calculateMarkup(int sellPrice, int buyPrice){
+        return this.getSellPrice() - this.getBuyPrice() ;
     }
 }

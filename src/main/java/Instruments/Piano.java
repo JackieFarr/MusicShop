@@ -1,6 +1,8 @@
 package Instruments;
 
-public class Piano extends Instrument{
+import Interfaces.ISell;
+
+public class Piano extends Instrument implements ISell {
 
     private String brand;
     private int numOfPedals;
@@ -17,5 +19,9 @@ public class Piano extends Instrument{
 
     public int getNumOfPedals() {
         return this.numOfPedals;
+    }
+
+    public int calculateMarkup(int sellPrice, int buyPrice){
+        return this.getSellPrice() - this.getBuyPrice() ;
     }
 }
