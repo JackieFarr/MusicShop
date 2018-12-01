@@ -21,7 +21,7 @@ public class Piano extends Instrument implements ISell {
         return this.numOfPedals;
     }
 
-    public int calculateMarkup(int sellPrice, int buyPrice){
+    public int calculateMarkup(){
         return this.getSellPrice() - this.getBuyPrice() ;
     }
 }

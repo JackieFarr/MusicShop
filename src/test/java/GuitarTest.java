@@ -50,6 +50,6 @@ public class GuitarTest {
 
     @Test
     public void hasMarkup(){
-        assertEquals(2100, guitar.calculateMarkup(2500, 400));
+        assertEquals(2100, guitar.calculateMarkup());
     }
 }

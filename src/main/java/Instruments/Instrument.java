@@ -1,8 +1,9 @@
 package Instruments;
 
 import Interfaces.IPlay;
+import Interfaces.ISell;
 
-public abstract class Instrument implements IPlay {
+public abstract class Instrument implements IPlay, ISell {
 
     private String colour;
     private String type;
@@ -42,5 +43,9 @@ public abstract class Instrument implements IPlay {
 
     public String play(String sound){
         return "I play this sound: " + this.sound;
+    }
+
+    public int calculateMarkup(){
+        return sellPrice - buyPrice;
     }
 }

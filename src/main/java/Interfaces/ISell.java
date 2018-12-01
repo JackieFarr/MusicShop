@@ -2,6 +2,6 @@ package Interfaces;
 
 public interface ISell {
 
-    int calculateMarkup(int buyPrice, int sellPrice);
+    int calculateMarkup();
 //        return buyPrice - sellPrice;
     }

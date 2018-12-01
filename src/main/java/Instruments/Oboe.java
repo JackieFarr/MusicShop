@@ -15,7 +15,7 @@ public class Oboe extends Instrument implements ISell {
         return this.length;
     }
 
-    public int calculateMarkup(int sellPrice, int buyPrice){
+    public int calculateMarkup(){
         return this.getSellPrice() - this.getBuyPrice() ;
     }
 }

@@ -3,14 +3,14 @@ import Interfaces.ISell;
 
 import java.util.ArrayList;
 
-public class Shop implements ISell {
+public class Shop {
 
     private ArrayList<ISell> stock;
     private String name;
 
-    public Shop(String name, ArrayList stock){
+    public Shop(String name){
         this.name = name;
-        this.stock = stock;
+        this.stock = new ArrayList<ISell>();
     }
 
     public ArrayList<ISell> getStock() {
@@ -21,9 +21,6 @@ public class Shop implements ISell {
         return this.name;
     }
 
-    public int calculateMarkup(int buyPrice, int sellPrice){
-        return buyPrice - sellPrice;
-    }
 
     public void addStock(ISell stockItem){
         stock.add(stockItem);
@@ -34,4 +31,17 @@ public class Shop implements ISell {
                 this.stock.remove(instrument);
         }
     }
+
+    public int calculateShopProfit(){
+        int total = 0;
+            for (ISell item : this.stock) {
+            total += item.calculateMarkup();
+            }
+        return total;
+    }
+
+    // for each instrument in the shop
+        // calculate the markup
+        // add it to the total
+        // return the total
 }

@@ -21,7 +21,7 @@ public class Guitar extends Instrument implements ISell {
         return this.numOfStrings;
     }
 
-    public int calculateMarkup(int sellPrice, int buyPrice){
+    public int calculateMarkup(){
         return this.getSellPrice() - this.getBuyPrice() ;
     }
 }

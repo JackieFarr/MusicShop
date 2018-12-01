@@ -15,7 +15,7 @@ public class Violin extends Instrument implements ISell {
         return this.bowType;
     }
 
-    public int calculateMarkup(int sellPrice, int buyPrice){
+    public int calculateMarkup(){
         return this.getSellPrice() - this.getBuyPrice() ;
     }
 }

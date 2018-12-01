@@ -35,23 +35,44 @@ public class ShopTest {
         stock.add(violin);
         stock.add(piano);
 
-        shop = new Shop("Empire Records", stock);
+        shop = new Shop("Empire Records");
     }
 
     @Test
     public void getAllStock(){
+        shop.addStock(piano2);
+        shop.addStock(guitar);
+        shop.addStock(piano);
+        shop.addStock(oboe);
         assertEquals(4, shop.getStock().size());
     }
 
     @Test
     public void canAddStock(){
         shop.addStock(piano2);
+        shop.addStock(piano);
+        shop.addStock(guitar);
+        shop.addStock(piano);
+        shop.addStock(oboe);
         assertEquals(5, shop.getStock().size());
     }
 
     @Test
     public void canSellStock(){
+        shop.addStock(piano2);
+        shop.addStock(guitar);
+        shop.addStock(piano);
+        shop.addStock(oboe);
         shop.sellStockByName(piano);
         assertEquals(3, shop.getStock().size());
+    }
+
+    @Test
+    public void hasProfit(){
+        shop.addStock(piano2);
+        shop.addStock(guitar);
+        shop.addStock(piano);
+        shop.addStock(oboe);
+        assertEquals(5000, shop.calculateShopProfit());
     }
 }
