@@ -1,6 +1,8 @@
 package Items;
 
-public abstract class StockItems {
+import Interfaces.ISell;
+
+public abstract class StockItems implements ISell {
 
     private int buyPrice;
     private int sellPrice;
