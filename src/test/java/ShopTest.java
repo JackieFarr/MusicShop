@@ -28,7 +28,7 @@ public class ShopTest {
         piano2 = new Piano("Yellow", "Gold", 5000, 3000, "Yamaha", 4, "honky tonky tonk");
         violin = new Violin("Red", "Maple", 5000, 2000, "Ivory", "eee");
 
-        ArrayList<ISell> stock = new ArrayList<ISell>();
+        ArrayList<ISell> stock = new ArrayList<>();
 
         stock.add(guitar);
         stock.add(oboe);
