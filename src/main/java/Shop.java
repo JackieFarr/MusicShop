@@ -10,7 +10,7 @@ public class Shop {
 
     public Shop(String name){
         this.name = name;
-        this.stock = new ArrayList<ISell>();
+        this.stock = new ArrayList<>();
     }
 
     public ArrayList<ISell> getStock() {

@@ -12,4 +12,8 @@ public class GuitarString extends StockItems {
     public String getGuitarType() {
         return this.guitarType;
     }
+
+    public int calculateMarkup(){
+        return sellPrice - buyPrice;
+    }
 }

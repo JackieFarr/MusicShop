@@ -4,8 +4,8 @@ import Interfaces.ISell;
 
 public abstract class StockItems implements ISell {
 
-    private int buyPrice;
-    private int sellPrice;
+    protected int buyPrice;
+    protected int sellPrice;
     private String brand;
 
     public StockItems(int buyPrice, int sellPrice, String brand){
@@ -24,5 +24,9 @@ public abstract class StockItems implements ISell {
 
     public String getBrand() {
         return this.brand;
+    }
+
+    public int calculateMarkup(){
+        return this.sellPrice - this.buyPrice;
     }
 }
